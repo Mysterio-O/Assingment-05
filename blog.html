@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="primary-bg">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,25 +16,66 @@
         .poppins {
             font-family: "Poppins", sans-serif;
         }
+
         .primary-bg {
             background-color: #F4F7FF;
         }
+
+        .question-ttile {
+            border-bottom: 1px dotted #BBBBBB;
+        }
     </style>
 </head>
+
 <body>
     <header>
-        <section class="container mx-auto bg-white rounded-2xl">
-            <nav class="flex justify-between py-6 px-6 mt-6 ">
+        <section class="container mx-auto bg-white rounded-2xl mb-4">
+            <nav class="flex justify-between py-6 px-6 mt-6">
                 <div class="flex items-center gap-3">
                     <img src="./assets/logo.png" alt="">
                     <h1 class="text-4xl">Dev<span class="font-extrabold">Board</span></h1>
                 </div>
                 <div class="flex items-center gap-9">
-                    <button id="back-btn" class="btn bg-indigo-700 text-white font-bold rounded-lg">Back to Desk</button>
+                    <button id="back-btn" class="btn bg-indigo-700 text-white font-bold rounded-lg">Back to
+                        Desk</button>
                 </div>
             </nav>
+        </section>
+        <!-- blog section -->
+        <h1 id="section-title" class="text-3xl font-bold text-center mb-6">Blogs</h1>
+        <section class="container mx-auto">
+            <div class="bg-white rounded-lg mb-4">
+                <h1 class="text-2xl font-semibold p-4 question-ttile">Question-1: What are the different ways to select an element in the DOM?</h1>
+                <p class="py-5 px-4 text-gray-500">There are so many ways to select an element in the DOM I guess. But I know couple of them. First we should pick the element by using a javaScript function "document". Then  we have to use another functions called <strong>"getElementById()", "getElementsByClassName()", "getElementByTagName()", "querySelectorAll()", "querySelector()".</strong> These functions help us to find an element from the document by their <b>id, class, tag names</b>. Also use can select them with <b>query-selectors</b>, in that case <strong>querySelectorAll() </strong> finds all those elements with that name or names. And <strong>querySelector()</strong> only selects the first element. <br> The whole scenario something looks like this :  <strong>document.getElementById('Id name'); , document.getElementsByClassName('class name'); , document.getElementByTagName('tag name'); ,document.querySelectorAll('class name/names'); , document.querySelector('class name/names')</strong></p>
+            </div>
+            <div class="bg-white rounded-lg mb-4">
+                <h1 class="text-2xl font-semibold p-4 question-ttile">Question-2: What is the difference between
+                    innerHTML, innerText, and textContent ?</h1>
+                <p class="py-5 px-4 text-gray-500">innerText and innerContent kind of same thing. Both show the text inside of an element. But one thing that innerText can do innerContent cant. innerText ignores hidden elements inside of the main element if there is any but in the same case, innerContent exposes the whole text inside of the element although it was a hidden text, but innerContent clearly ignores and show the whole text. And innerHTML returns the whole HTML structure. We can manipulate the inner-text with innerText or innerContent and also manipulate the inner-html structure with innerHTML tag. <b>Example:</b> <strong>( element.innerText = 'new text'; / element.innerContent = 'new text'; and like this element.innerHTML = `HTML Structure`; we can add new HTML in the document. )</strong></p>
+            </div>
+            <div class="bg-white rounded-lg mb-4">
+                <h1 class="text-2xl font-semibold p-4 question-ttile">Question-3: What is event delegation in the DOM?
+
+                </h1>
+                <p class="py-5 px-4 text-gray-500">Event Delegation is an interesting thing in javaScript. it helps us to write less code and get more access. this concept is something like that, "you wanna tell something to your 5 friends, instead of telling them one by one you can call them together and tell whatever you want. By doing this, youre saving your time and you wont have to repeat those words." Event Delegation works exactly like this. Just have to call the parent element and there are bunch of options that we can access from there including elements and their styles and contents. We use 'target' attribute to do all these. This makes us to write less code.</p>
+            </div>
+            <div class="bg-white rounded-lg mb-4">
+                <h1 class="text-2xl font-semibold p-4 question-ttile">Question-4: What is event bubbling in the DOM?
+
+                </h1>
+                <p class="py-5 px-4 text-gray-500">Bubblinig is an everyday regular thing that is always going on in the internet. Its something like when you go under the water and release your breathe and the bubbles are appearing on the water. Suppose there is a div. In that div there is an span and inside that span there is a button. If we select the button and add an eventListener to click, although I was clicking the button but that click was also hitting the parent span and grandparent div. This process can be more complex in more complex situation. And this is what I understand Event Bubbling is.</p>
+            </div>
+            <div class="bg-white rounded-lg mb-4">
+                <h1 class="text-2xl font-semibold p-4 question-ttile">Question-5: How do you create, add, and remove
+                    elements using JavaScript?
+
+                </h1>
+                <p class="py-5 px-4 text-gray-500">These things are the simplest things to do in javaScript. At first we need to select the section with javaScript selectors where we want to create, add or remove elements. Then we need to create an element with <strong>document.createElement('elementType');</strong> . Then we will be able to catch the newly created element and write some html code like this: <strong>elementType.innerHTML = ` section i want to add using html. `</strong>  We can also use tailwind classes here. In that case we need to use cdn from tailwind docs. After completing the HTML structure we need to append that child in that selected element. We simply can do like this: <strong>selectedElement.appendChild(elementType);</strong> <br>
+                We also can remove elements. There are couple of ways to do that. Either we can replace an empty string inside that element like this: <strong>const newContent = seletedElement.innerText = "";</strong>, or we can also use <strong>removeChild()</strong> function to remove entirely a child from parent container.</p>
+
         </section>
     </header>
 </body>
 <script src="./script/blog.js"></script>
+
 </html>
